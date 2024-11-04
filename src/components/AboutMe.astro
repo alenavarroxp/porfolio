@@ -1,4 +1,7 @@
 ---
+import SocialPill from "./SocialPill.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+
 const personalImageAlt = "Alejandro Navarro";
 ---
 
@@ -19,7 +22,10 @@ const personalImageAlt = "Alejandro Navarro";
       Estoy comenzando mi carrera profesional en el mundo del <strong
         >desarrollo web y móvil</strong>. En mi GitHub puedes encontrar algunos de <strong>mis proyectos destacados más recientes</strong>.
     </p>
-  
+    <SocialPill href="https://www.github.com/alenavarroxp">
+      <GitHubIcon class="size-4"/>
+      GitHub
+    </SocialPill>
   </div>
 
   <img

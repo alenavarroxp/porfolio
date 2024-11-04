@@ -5,6 +5,8 @@ import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import React from "./icons/React.astro";
+import BabylonJS from "./icons/BabylonJS.astro";
+import Storybook from "./icons/Storybook.astro";
 
 const TAGS = {
   NEXT: {
@@ -17,29 +19,47 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-  REACT : {
+  REACT: {
     name: "React",
-    class: "bg-[#000] text-black",
+    class: "bg-[#1A202C] text-white",
     icon: React,
+  },
+  BABYLONJS: {
+    name: "Babylon.js",
+    class: "bg-[#2D2D2D] text-white",
+    icon: BabylonJS,
+  },
+  STORYBOOK: {
+    name: "Storybook",
+    class: "bg-[#8B2C44] text-white",
+    icon: Storybook,
   },
 };
 const PROJECTS = [
   {
     title: "UIXP Elements - Libreria de componentes de UI para React",
-    description:
-      "Librería de componentes de UI para React. Creada con Storybook, TypeScript y Tailwind CSS. Publicada en NPM.",
+    description: "Librería de componentes de UI para React. Publicada en NPM.",
     link: "https://www.npmjs.com/package/uixp-elements",
     github: "https://github.com/alenavarroxp/uixp-elements",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+    image: "/projects/uixp-elements.webp",
+    tags: [TAGS.STORYBOOK, TAGS.TAILWIND],
   },
   {
     title: "OrionX - Asistente 3D virtual con Gemini",
     description:
-      "Chatbot asdasdasdad  ",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Chatbot en 3D con el que puedes interactuar en tiempo real. Está construido con Babylon.js y React.",
+    link: "https://orionxp.netlify.app/",
+    github: "https://github.com/alenavarroxp/OrionX",
+    image: "/projects/orionx.webp",
+    tags: [TAGS.BABYLONJS, TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "AIgnite - Generador de ideas para proyectos",
+    description: "Proyecto software sencillo para inspirarte en tus próximos proyectos. Construido con React.",
+    link: "https://aignite.netlify.app/",
+    github: "https://github.com/alenavarroxp/AIgnite",
+    image: "/projects/aignite.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
 ];
 ---
@@ -67,7 +87,7 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center justify-center`}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
